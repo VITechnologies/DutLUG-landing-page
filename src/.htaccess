@@ -1,0 +1,13 @@
+
+RewriteOptions inherit
+
+RewriteEngine on
+RewriteCond %{SERVER_PORT} 80
+RewriteCond %{HTTP_HOST} ^(www\.)?dutlug\.nl
+RewriteRule ^(.*)$ https://www.dutlug.nl/$1 [R,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^onlinesessions$ "https\:\/\/forums\.ni\.com\/t5\/DutLUG\/DutLUG\-Online\-Sessions\-22\-07\-2020\/gpm\-p\/4061900" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^forum$ "https\:\/\/forums\.ni\.com\/t5\/DutLUG\/gp\-p\/5336" [R=301,L]
+RewriteCond %{HTTP_HOST} ^.*$
+RewriteRule ^rc1603$ "https\:\/\/forms\.office\.com\/e\/QS8CSFvbm6" [R=302,L]
